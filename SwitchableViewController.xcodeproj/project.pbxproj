@@ -10,6 +10,8 @@
 		759642C9254D5E170080E233 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642C8254D5E170080E233 /* RootViewController.swift */; };
 		759642CB254D5E230080E233 /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759642CA254D5E230080E233 /* RootViewController.storyboard */; };
 		759642CF254D5EB90080E233 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642CE254D5EB90080E233 /* UIViewController+.swift */; };
+		759642D2254D619D0080E233 /* SwitchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642D1254D619D0080E233 /* SwitchButtonView.swift */; };
+		759642D4254D61B70080E233 /* SwitchButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759642D3254D61B70080E233 /* SwitchButtonView.xib */; };
 		75B66985254D5BA8001B2A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B66984254D5BA8001B2A5C /* AppDelegate.swift */; };
 		75B6698E254D5BA9001B2A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B6698D254D5BA9001B2A5C /* Assets.xcassets */; };
 		75B66991254D5BA9001B2A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B6698F254D5BA9001B2A5C /* LaunchScreen.storyboard */; };
@@ -38,6 +40,8 @@
 		759642C8254D5E170080E233 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		759642CA254D5E230080E233 /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		759642CE254D5EB90080E233 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		759642D1254D619D0080E233 /* SwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonView.swift; sourceTree = "<group>"; };
+		759642D3254D61B70080E233 /* SwitchButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchButtonView.xib; sourceTree = "<group>"; };
 		75B66981254D5BA8001B2A5C /* SwitchableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B66984254D5BA8001B2A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B6698D254D5BA9001B2A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		759642C7254D5DDF0080E233 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				759642D0254D618E0080E233 /* Parts */,
 				759642C8254D5E170080E233 /* RootViewController.swift */,
 				759642CA254D5E230080E233 /* RootViewController.storyboard */,
 			);
@@ -107,6 +112,15 @@
 				759642CE254D5EB90080E233 /* UIViewController+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		759642D0254D618E0080E233 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				759642D1254D619D0080E233 /* SwitchButtonView.swift */,
+				759642D3254D61B70080E233 /* SwitchButtonView.xib */,
+			);
+			path = Parts;
 			sourceTree = "<group>";
 		};
 		75B66978254D5BA8001B2A5C = {
@@ -266,6 +280,7 @@
 			files = (
 				759642CB254D5E230080E233 /* RootViewController.storyboard in Resources */,
 				75B66991254D5BA9001B2A5C /* LaunchScreen.storyboard in Resources */,
+				759642D4254D61B70080E233 /* SwitchButtonView.xib in Resources */,
 				75B6698E254D5BA9001B2A5C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +308,7 @@
 			files = (
 				759642C9254D5E170080E233 /* RootViewController.swift in Sources */,
 				75B66985254D5BA8001B2A5C /* AppDelegate.swift in Sources */,
+				759642D2254D619D0080E233 /* SwitchButtonView.swift in Sources */,
 				759642CF254D5EB90080E233 /* UIViewController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
