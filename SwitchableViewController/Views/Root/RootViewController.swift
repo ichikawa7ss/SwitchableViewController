@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  SwitchableViewController
 //
 //  Created by ichikawa on 2020/10/31.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
