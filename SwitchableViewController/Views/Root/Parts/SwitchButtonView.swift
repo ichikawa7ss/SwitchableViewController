@@ -36,6 +36,11 @@ final class SwitchButtonView: UIView {
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
         addSubview(view)
     }
+    
+    func setup() {
+        // 回転したときに正対して見えるように予め画像を反転させておく
+        self.secondButtonView.transform = CGAffineTransform(rotationAngle: .pi)
+    }
 }
 
 // MARK: - Event

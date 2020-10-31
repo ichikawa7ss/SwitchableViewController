@@ -22,33 +22,59 @@
                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0ZQ-1K-3GV">
-                            <rect key="frame" x="0.0" y="-0.5" width="50" height="49.5"/>
+                            <rect key="frame" x="8" y="7.5" width="34" height="33.5"/>
+                            <color key="tintColor" red="0.96924716229999996" green="0.064876057210000004" blue="0.078770600260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
                     </subviews>
+                    <color key="backgroundColor" red="0.96231049300000004" green="0.9324773663" blue="0.45437426780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstItem="0ZQ-1K-3GV" firstAttribute="leading" secondItem="3WB-Ym-zFQ" secondAttribute="leading" id="XU8-2M-kG5"/>
-                        <constraint firstItem="0ZQ-1K-3GV" firstAttribute="top" secondItem="3WB-Ym-zFQ" secondAttribute="top" id="YTx-Fr-1at"/>
-                        <constraint firstAttribute="bottom" secondItem="0ZQ-1K-3GV" secondAttribute="bottom" id="ZYf-Bk-xso"/>
-                        <constraint firstAttribute="trailing" secondItem="0ZQ-1K-3GV" secondAttribute="trailing" id="dfi-pc-EJW"/>
+                        <constraint firstItem="0ZQ-1K-3GV" firstAttribute="leading" secondItem="3WB-Ym-zFQ" secondAttribute="leading" constant="8" id="XU8-2M-kG5"/>
+                        <constraint firstItem="0ZQ-1K-3GV" firstAttribute="top" secondItem="3WB-Ym-zFQ" secondAttribute="top" constant="8" id="YTx-Fr-1at"/>
+                        <constraint firstAttribute="bottom" secondItem="0ZQ-1K-3GV" secondAttribute="bottom" constant="8" id="ZYf-Bk-xso"/>
+                        <constraint firstAttribute="trailing" secondItem="0ZQ-1K-3GV" secondAttribute="trailing" constant="8" id="dfi-pc-EJW"/>
                         <constraint firstAttribute="width" constant="50" id="hwS-c5-wlf"/>
                         <constraint firstAttribute="height" constant="50" id="x86-Sc-4zX"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.98737925289999995" green="0.83241838219999997" blue="0.13642343879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-L7-HhQ">
                     <rect key="frame" x="100" y="100" width="50" height="50"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7v0-Di-gAy">
-                            <rect key="frame" x="0.0" y="1" width="50" height="48"/>
+                            <rect key="frame" x="8" y="9" width="34" height="32"/>
+                            <color key="tintColor" red="0.96924716229999996" green="0.064876057210000004" blue="0.078770600260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
                     </subviews>
+                    <color key="backgroundColor" red="0.96231049300000004" green="0.9324773663" blue="0.45437426780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="7v0-Di-gAy" secondAttribute="bottom" id="H3a-gd-Pqs"/>
+                        <constraint firstAttribute="bottom" secondItem="7v0-Di-gAy" secondAttribute="bottom" constant="8" id="H3a-gd-Pqs"/>
                         <constraint firstAttribute="height" constant="50" id="NfY-Zt-rwf"/>
-                        <constraint firstItem="7v0-Di-gAy" firstAttribute="top" secondItem="OZR-L7-HhQ" secondAttribute="top" id="OQf-Mg-7Mg"/>
-                        <constraint firstAttribute="trailing" secondItem="7v0-Di-gAy" secondAttribute="trailing" id="Th3-X9-NUA"/>
+                        <constraint firstItem="7v0-Di-gAy" firstAttribute="top" secondItem="OZR-L7-HhQ" secondAttribute="top" constant="8" id="OQf-Mg-7Mg"/>
+                        <constraint firstAttribute="trailing" secondItem="7v0-Di-gAy" secondAttribute="trailing" constant="8" id="Th3-X9-NUA"/>
                         <constraint firstAttribute="width" constant="50" id="YkD-LT-KcP"/>
-                        <constraint firstItem="7v0-Di-gAy" firstAttribute="leading" secondItem="OZR-L7-HhQ" secondAttribute="leading" id="ebV-EQ-V4i"/>
+                        <constraint firstItem="7v0-Di-gAy" firstAttribute="leading" secondItem="OZR-L7-HhQ" secondAttribute="leading" constant="8" id="ebV-EQ-V4i"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.98737925289999995" green="0.83241838219999997" blue="0.13642343879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

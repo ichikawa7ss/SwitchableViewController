@@ -10,7 +10,10 @@ import UIKit
 
 final class RootViewController: UIViewController {
 
+    @IBOutlet private weak var switchButtonView: SwitchButtonView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.switchButtonView.setup()
     }
 }

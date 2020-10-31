@@ -48,6 +48,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jat-Bq-gnG"/>
                     </view>
+                    <connections>
+                        <outlet property="switchButtonView" destination="lDq-ho-vTK" id="bYm-WH-rfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYj-sm-FEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

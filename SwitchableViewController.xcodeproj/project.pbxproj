@@ -12,6 +12,7 @@
 		759642CF254D5EB90080E233 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642CE254D5EB90080E233 /* UIViewController+.swift */; };
 		759642D2254D619D0080E233 /* SwitchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642D1254D619D0080E233 /* SwitchButtonView.swift */; };
 		759642D4254D61B70080E233 /* SwitchButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759642D3254D61B70080E233 /* SwitchButtonView.xib */; };
+		759642D6254D6A940080E233 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642D5254D6A940080E233 /* UIView+.swift */; };
 		75B66985254D5BA8001B2A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B66984254D5BA8001B2A5C /* AppDelegate.swift */; };
 		75B6698E254D5BA9001B2A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B6698D254D5BA9001B2A5C /* Assets.xcassets */; };
 		75B66991254D5BA9001B2A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B6698F254D5BA9001B2A5C /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 		759642CE254D5EB90080E233 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		759642D1254D619D0080E233 /* SwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonView.swift; sourceTree = "<group>"; };
 		759642D3254D61B70080E233 /* SwitchButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchButtonView.xib; sourceTree = "<group>"; };
+		759642D5254D6A940080E233 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		75B66981254D5BA8001B2A5C /* SwitchableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B66984254D5BA8001B2A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B6698D254D5BA9001B2A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				759642CE254D5EB90080E233 /* UIViewController+.swift */,
+				759642D5254D6A940080E233 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				75B66985254D5BA8001B2A5C /* AppDelegate.swift in Sources */,
 				759642D2254D619D0080E233 /* SwitchButtonView.swift in Sources */,
 				759642CF254D5EB90080E233 /* UIViewController+.swift in Sources */,
+				759642D6254D6A940080E233 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
