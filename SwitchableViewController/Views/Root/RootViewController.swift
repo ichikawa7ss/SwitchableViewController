@@ -10,7 +10,11 @@ import UIKit
 
 final class RootViewController: UIViewController {
 
-    @IBOutlet private weak var switchButtonView: SwitchButtonView!
+    @IBOutlet private weak var switchButtonView: SwitchButtonView! {
+        willSet {
+            newValue.delegate = self
+        }
+    }
     @IBOutlet private weak var containerView: UIView!
     
     var chiledViewControllers: [UIViewController] = []
@@ -33,7 +37,7 @@ extension RootViewController {
         UIView.transition(
             from: currentView,
             to: vc.view,
-            duration: 0.5,
+            duration: 0.3,
             options: .transitionCrossDissolve,
             completion: { [weak self] _ in
                 guard let `self` = self else { return }
@@ -41,6 +45,7 @@ extension RootViewController {
                 // 呼んでいない場合、追加したViewControllerのviewWillAppear:が動作しない場合がある
                 vc.didMove(toParent: self)
                 if let view = self.containerView.subviews.first {
+                    view.translatesAutoresizingMaskIntoConstraints = false
                     // 制約をつけ直す
                     view.topAnchor.constraint(equalTo: self.containerView.topAnchor).isActive = true
                     view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor).isActive = true
@@ -48,5 +53,12 @@ extension RootViewController {
                     view.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
                 }
         })
+    }
+}
+
+extension RootViewController: SwitchButtonViewDelegate {
+
+    func switchButtonView(_ switchButtonView: SwitchButtonView, destinationContentType: ContentType) {
+        self.setContentViewController(contentType: destinationContentType)
     }
 }
