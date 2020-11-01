@@ -8,19 +8,17 @@
 
 import UIKit
 
-protocol SwitchButtonViewDelegate {
-    func switchButtonView(_ switchButtonView: SwitchButtonView, didTapButton destinationContentType: ContentType)
-}
-
 final class SwitchButtonView: UIView {
 
     @IBOutlet private weak var toSearchButtonView: UIView! {
         didSet {
+            // 2. 各ボタンとなるViewに`UITapGestureRecogniger`をaddする。
             toSearchButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToSearchButtonView)))
         }
     }
     @IBOutlet private weak var toHomeButtonView: UIView! {
         didSet {
+            // 2. 各ボタンとなるViewに`UITapGestureRecogniger`をaddする。
             toHomeButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToHomeButtonView)))
         }
     }
@@ -53,16 +51,22 @@ final class SwitchButtonView: UIView {
 extension SwitchButtonView {
     @objc
     private func tapToSearchButtonView() {
-        self.delegate?.switchButtonView(self, didTapButton: .search)
+        // 3. Viewの回転
         self.rotate(to: .search)
+        // 4. delegateでRootViewControllerにタップイベントを伝播
+        self.delegate?.switchButtonView(self, didTapButton: .search)
     }
     
     @objc
     private func tapToHomeButtonView() {
-        self.delegate?.switchButtonView(self, didTapButton: .home)
+        // 3. Viewの回転
         self.rotate(to: .home)
+        // 4. delegateでRootViewControllerにタップイベントを伝播
+        self.delegate?.switchButtonView(self, didTapButton: .home)
     }
     
+    /// SwitchButtonViewの回転処理
+    /// - Parameter type: タップされたボタンのタイプ。タップするボタンのタイプ似合わせて回転方向を変える。
     private func rotate(to type: ContentType) {
         UIView.animate(withDuration: 0.3) {
             switch type {
@@ -75,6 +79,10 @@ extension SwitchButtonView {
             }
         }
     }
+}
+
+protocol SwitchButtonViewDelegate {
+    func switchButtonView(_ switchButtonView: SwitchButtonView, didTapButton destinationContentType: ContentType)
 }
 
 /// スイッチングで表示するコンテンツのタイプ
