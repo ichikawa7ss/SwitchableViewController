@@ -49,6 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="jat-Bq-gnG"/>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="Q8a-wD-Ho5" id="TJv-gd-FId"/>
                         <outlet property="switchButtonView" destination="lDq-ho-vTK" id="bYm-WH-rfw"/>
                     </connections>
                 </viewController>

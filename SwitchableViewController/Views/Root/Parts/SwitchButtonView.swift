@@ -8,18 +8,24 @@
 
 import UIKit
 
+protocol SwitchButtonViewDelegate {
+    func switchButtonView(_ switchButtonView: SwitchButtonView, destinationContentType: ContentType)
+}
+
 final class SwitchButtonView: UIView {
 
-    @IBOutlet private weak var firstButtonView: UIView! {
+    @IBOutlet private weak var toSearchButtonView: UIView! {
         didSet {
-            firstButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapFirstButtonView)))
+            toSearchButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToSearchButtonView)))
         }
     }
-    @IBOutlet private weak var secondButtonView: UIView! {
+    @IBOutlet private weak var toHomeButtonView: UIView! {
         didSet {
-            secondButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapSecondButtonView)))
+            toHomeButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToHomeButtonView)))
         }
     }
+    
+    var delegate: SwitchButtonViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,29 +45,31 @@ final class SwitchButtonView: UIView {
     
     func setup() {
         // 回転したときに正対して見えるように予め画像を反転させておく
-        self.secondButtonView.transform = CGAffineTransform(rotationAngle: .pi)
+        self.toHomeButtonView.transform = CGAffineTransform(rotationAngle: .pi)
     }
 }
 
 // MARK: - Event
 extension SwitchButtonView {
     @objc
-    private func tapFirstButtonView() {
-        self.rotate(type: .toSearch)
+    private func tapToSearchButtonView() {
+        self.delegate?.switchButtonView(self, destinationContentType: .search)
+        self.rotate(to: .search)
     }
     
     @objc
-    private func tapSecondButtonView() {
-        self.rotate(type: .toHome)
+    private func tapToHomeButtonView() {
+        self.delegate?.switchButtonView(self, destinationContentType: .home)
+        self.rotate(to: .home)
     }
     
-    private func rotate(type: ContentType.DestinationButtonType) {
+    private func rotate(to type: ContentType) {
         UIView.animate(withDuration: 0.3) {
             switch type {
-            case .toSearch:
+            case .search:
                 // 検索画面への遷移だったら時計回りで回転
                 self.transform = CGAffineTransform(rotationAngle: -.pi * 0.999) // 反転時は時計回りにしたいので半回転しきらないようにしておく
-            case .toHome:
+            case .home:
                 // ホーム画面への遷移だったら反時計回りで戻す
                 self.transform = .identity
             }
@@ -74,28 +82,4 @@ extension SwitchButtonView {
 enum ContentType: Int {
     case home
     case search
-    
-    /// セットで表示する遷移先を示すボタンのタイプ.
-    enum DestinationButtonType {
-        case toSearch
-        case toHome
-        
-        var toContentType: ContentType {
-            switch self {
-            case .toSearch:
-                return .search
-            case .toHome:
-                return .home
-            }
-        }
-    }
-    
-    var buttonType: DestinationButtonType {
-        switch self {
-        case .home:
-            return .toSearch
-        case .search:
-            return .toHome
-        }
-    }
 }
