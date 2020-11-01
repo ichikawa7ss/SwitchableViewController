@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		752F6557254EFF3600602D8E /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6556254EFF3600602D8E /* CustomNavigationController.swift */; };
 		752F655F254EFF8900602D8E /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F655E254EFF8900602D8E /* UIColor+.swift */; };
+		752F6565254F068200602D8E /* SlideSearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752F6564254F068200602D8E /* SlideSearchHeaderView.xib */; };
+		752F656A254F06B700602D8E /* SlideSearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6569254F06B700602D8E /* SlideSearchHeaderView.swift */; };
 		759642C9254D5E170080E233 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642C8254D5E170080E233 /* RootViewController.swift */; };
 		759642CB254D5E230080E233 /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759642CA254D5E230080E233 /* RootViewController.storyboard */; };
 		759642CF254D5EB90080E233 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759642CE254D5EB90080E233 /* UIViewController+.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		752F6556254EFF3600602D8E /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		752F655E254EFF8900602D8E /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		752F6564254F068200602D8E /* SlideSearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideSearchHeaderView.xib; sourceTree = "<group>"; };
+		752F6569254F06B700602D8E /* SlideSearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSearchHeaderView.swift; sourceTree = "<group>"; };
 		759642C8254D5E170080E233 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		759642CA254D5E230080E233 /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		759642CE254D5EB90080E233 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 				752F6556254EFF3600602D8E /* CustomNavigationController.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		752F6563254F066C00602D8E /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				752F6564254F068200602D8E /* SlideSearchHeaderView.xib */,
+				752F6569254F06B700602D8E /* SlideSearchHeaderView.swift */,
+			);
+			path = Parts;
 			sourceTree = "<group>";
 		};
 		759642C4254D5DB00080E233 /* Views */ = {
@@ -162,6 +175,7 @@
 		759642D8254D6B920080E233 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				752F6563254F066C00602D8E /* Parts */,
 				759642DD254D6C170080E233 /* SearchViewController.storyboard */,
 				759642DF254D6C3D0080E233 /* SearchViewController.swift */,
 			);
@@ -328,6 +342,7 @@
 				75B66991254D5BA9001B2A5C /* LaunchScreen.storyboard in Resources */,
 				759642D4254D61B70080E233 /* SwitchButtonView.xib in Resources */,
 				75B6698E254D5BA9001B2A5C /* Assets.xcassets in Resources */,
+				752F6565254F068200602D8E /* SlideSearchHeaderView.xib in Resources */,
 				759642DE254D6C170080E233 /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +373,7 @@
 				75B66985254D5BA8001B2A5C /* AppDelegate.swift in Sources */,
 				759642D2254D619D0080E233 /* SwitchButtonView.swift in Sources */,
 				752F6557254EFF3600602D8E /* CustomNavigationController.swift in Sources */,
+				752F656A254F06B700602D8E /* SlideSearchHeaderView.swift in Sources */,
 				759642CF254D5EB90080E233 /* UIViewController+.swift in Sources */,
 				759642D6254D6A940080E233 /* UIView+.swift in Sources */,
 				759642DA254D6BA30080E233 /* HomeViewController.swift in Sources */,
