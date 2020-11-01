@@ -41,19 +41,18 @@ extension RootViewController {
     /// - Parameter contentType: 表示するコンテンツ home/search
     private func setContentViewController(contentType: ContentType) {
         let vc = self.chiledViewControllers[contentType.rawValue]
-        let navVC = CustomNavigationController(rootViewController: vc)
-        self.addChild(navVC)
+        self.addChild(vc)
         let currentView = self.containerView.subviews.first ?? UIView()
         UIView.transition(
             from: currentView,
-            to: navVC.view,
+            to: vc.view,
             duration: 0.3,
             options: .transitionCrossDissolve,
             completion: { [weak self] _ in
                 guard let `self` = self else { return }
                 // addChildをしたあとはトランジションが完了したらdidMoveを呼ばなきゃいけない
                 // 呼んでいない場合、追加したViewControllerのviewWillAppear:が動作しない場合がある
-                navVC.didMove(toParent: self)
+                vc.didMove(toParent: self)
                 if let view = self.containerView.subviews.first {
                     view.translatesAutoresizingMaskIntoConstraints = false
                     // 制約をつけ直す
