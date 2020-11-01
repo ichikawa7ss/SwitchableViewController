@@ -57,8 +57,8 @@ extension RootViewController {
 }
 
 extension RootViewController: SwitchButtonViewDelegate {
-
-    func switchButtonView(_ switchButtonView: SwitchButtonView, destinationContentType: ContentType) {
+    
+    func switchButtonView(_ switchButtonView: SwitchButtonView, didTapButton destinationContentType: ContentType) {
         self.setContentViewController(contentType: destinationContentType)
     }
 }

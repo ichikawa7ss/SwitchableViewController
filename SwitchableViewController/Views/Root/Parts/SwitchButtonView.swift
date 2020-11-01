@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SwitchButtonViewDelegate {
-    func switchButtonView(_ switchButtonView: SwitchButtonView, destinationContentType: ContentType)
+    func switchButtonView(_ switchButtonView: SwitchButtonView, didTapButton destinationContentType: ContentType)
 }
 
 final class SwitchButtonView: UIView {
@@ -53,13 +53,13 @@ final class SwitchButtonView: UIView {
 extension SwitchButtonView {
     @objc
     private func tapToSearchButtonView() {
-        self.delegate?.switchButtonView(self, destinationContentType: .search)
+        self.delegate?.switchButtonView(self, didTapButton: .search)
         self.rotate(to: .search)
     }
     
     @objc
     private func tapToHomeButtonView() {
-        self.delegate?.switchButtonView(self, destinationContentType: .home)
+        self.delegate?.switchButtonView(self, didTapButton: .home)
         self.rotate(to: .home)
     }
     
@@ -74,7 +74,6 @@ extension SwitchButtonView {
                 self.transform = .identity
             }
         }
-
     }
 }
 
