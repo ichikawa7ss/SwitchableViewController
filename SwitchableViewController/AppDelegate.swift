@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let rootVC = RootViewController.instantiate()
+        rootVC.chiledViewControllers = [
+            HomeViewController.instantiate(),
+            SearchViewController.instantiate()
+        ]
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
 
